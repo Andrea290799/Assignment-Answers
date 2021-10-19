@@ -1,2 +1,2 @@
 # Assignment-Answers
-his repository contains the Bioinformatics Programming Challenges assignments.
+This repository contains the Bioinformatics Programming Challenges assignments.
