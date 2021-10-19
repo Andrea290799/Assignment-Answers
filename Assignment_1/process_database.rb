@@ -2,7 +2,9 @@ require './Complete_db_Object.rb'
 
 # FUNCTIONS ############################################################################
 def help
-    """This function print a help message if needed"""
+=begin
+    This function print a help message if needed.
+=end
     if ARGV[0] == "-h" || ARGV[0] == "-help"
         abort(
             "\n\t\tThis script generates a database with the information present in the
@@ -19,10 +21,12 @@ def help
     end
 
     def check_format(file, identifier)
-        """This function checks whether the given file has the correct format.
+=begin
+        This function checks whether the given file has the correct format.
         param file: input file
         param identifier: regular expression to search in the file. It must be
-        between '/'."""
+        between '/'.
+=end
 
         if File.file?(file) == true
 
