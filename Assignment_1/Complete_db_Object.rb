@@ -123,31 +123,31 @@ class Database
     end
 
 
-          def Database.generate_new_db_file(file)
+    def Database.generate_new_db_file(file)
 =begin
-              This class method generates a new database file with updated
-              information after planting.
-              param file: the output file.
+        This class method generates a new database file with updated
+        information after planting.
+        param file: the output file.
 =end
     
-            File.open(file, 'w') do |f|
+      File.open(file, 'w') do |f|
 
-              f.puts @stock_header
-
-            end
-
-            all_stocks = SeedStock.all_instances
-      
-            all_stocks.each do |record|
-
-              File.open(file, 'a') do |f|
-
-                f.puts "#{record.Seed_Stock}\t#{record.Mutant_Gene_ID}\t#{record.Last_Planted}\t#{record.Storage}\t#{record.Grams_Remaining}"
-              
-              end
-
-            end
-            
-          end
+        f.puts @stock_header
 
       end
+
+      all_stocks = SeedStock.all_instances
+      
+      all_stocks.each do |record|
+
+        File.open(file, 'a') do |f|
+
+          f.puts "#{record.Seed_Stock}\t#{record.Mutant_Gene_ID}\t#{record.Last_Planted}\t#{record.Storage}\t#{record.Grams_Remaining}"
+              
+        end
+
+      end
+            
+    end
+
+end
