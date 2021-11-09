@@ -103,36 +103,49 @@ class Network
                 end
 
                 go_terms = network.annotations["GO"][gene]
-
-                if not go_terms.empty?
                     
-                    puts "\tGene #{gene} GO terms"
+                puts "\tGene #{gene} GO terms"
+                puts
+
+                if go_terms.empty?
+
+                    puts "\t\tNo GO terms found"
                     puts
+
+                else
 
                     go_terms.uniq!
 
                     go_terms.each do |go_term|
+    
+                        puts "\t\t#{go_term[0]}\t#{go_term[1]}\t#{go_term[2]}\t" 
+                        puts  
 
-                        puts "\t\t#{go_term[0]}\t#{go_term[1]}\t#{go_term[2]}\t" unless go_term.empty?
-                        puts
                     end
 
-                end   
+                end
+
 
                 kegg_terms = network.annotations["KEGG"][gene]
 
-                if not kegg_terms.empty?
+                puts "\tGene #{gene} KEGG terms" 
+                puts 
 
-                    puts "\tGene #{gene} KEGG terms"  
+                if kegg_terms.empty?
+                    
+                    puts "\t\tNo KEGG terms found"
                     puts
+
+                else
 
                     kegg_terms.each do |kegg_term|
 
-                        puts "\t\t#{kegg_term[0]}\t#{kegg_term[1]}" unless kegg_term.empty?
+                        puts "\t\t#{kegg_term[0]}\t#{kegg_term[1]}" 
                         puts
-                    end
 
-                end 
+                    end 
+
+                end
 
             end
 
