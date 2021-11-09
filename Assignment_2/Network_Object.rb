@@ -58,9 +58,9 @@ class Network
         puts "Interaction information obtained from IntAct (filtered by taxid=3702 and miscore >= 0.4)"
         puts "KEGG and GO information obtained from TogoWS (only selected biological process from GO)"
         puts
-        puts " \t\t\t\t\t\t\t\t ----------------"
-        puts "\t\t\t\t\t\t\t\t|Found networks|"
-        puts " \t\t\t\t\t\t\t\t ----------------"
+        puts "\t\t\t\t\t\t\t\t ----------------"
+        puts "\t\t\t\t\t\t\t\t |Found networks|"
+        puts "\t\t\t\t\t\t\t\t ----------------"
         puts
 
         sum = 0 #gene list counter
