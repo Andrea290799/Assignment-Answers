@@ -738,4 +738,5 @@ Network 4:
 
 	Genes on the list: ["AT3G48360", "AT4G37610"]
 
-12.0% of the genes in the list interact with one another. The percentage is low, at least filtering by 0.4 miscore.
+12.0% of the genes in the list interact with one another.
+The percentage is low, at least filtering by 0.4 miscore.

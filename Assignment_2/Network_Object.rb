@@ -162,7 +162,19 @@ class Network
         puts
         percentage = sum.to_f/total.to_f
         percentage = percentage.round(2)*100
-        print "#{percentage}% of the genes in the list interact with one another. The percentage is low, at least filtering by 0.4 miscore."
+        print "#{percentage}% of the genes in the list interact with one another."
+        puts
+
+        if percentage < 50 
+
+            print "The percentage is low, at least filtering by 0.4 miscore."
+
+        else
+
+            print "The percentage is high."
+
+        end
+
     end
      
 end
