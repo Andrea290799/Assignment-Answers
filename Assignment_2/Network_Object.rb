@@ -1,6 +1,10 @@
+# Class whose instances are gene interaction networks. Attributes: network and processed annotations.
 class Network
 
+    # @return [list] all networks
     attr_accessor :network
+
+    # @return [hash] processed annotations
     attr_accessor :annotations
 
     @@record_list_network = Array.new
@@ -21,11 +25,11 @@ class Network
 
     end
 
+
+    # This class method loads the information from a list.
+    # @param list [list] the list to read.
     def Network.load_from_list(list)
-=begin
-        This class method loads the information from a list.
-        param list: the list to read.
-=end
+
         list.each do |network|
 
             # We create new instances
@@ -36,20 +40,17 @@ class Network
                               
     end
 
+    # This class method returns all instances of the class.
+    # @return [hash] all Network instances.
     def Network.all_instances
-=begin
-        This class method returns all instances of the class.
-        return @@record_list_network: list that contains all the instances.
-=end
+
         return @@record_list_network
                 
     end
 
-    def Network.create_report
 
-=begin
-        This class method writes a results report in a new file.
-=end
+    # This class method writes a results report in a new file.
+    def Network.create_report
 
         File.delete('Report.txt') if File.exist?('Report.txt')
 
@@ -124,7 +125,6 @@ class Network
                     end
 
                 end
-
 
                 kegg_terms = network.annotations["KEGG"][gene]
 

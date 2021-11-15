@@ -1,9 +1,16 @@
+# Class whose instances are annotations for a gene. Attributes: url address, gene ID
+# and annotation. 
 class Annotator
 
     #uso general annotator
 
+    # @return [string] url to search
     attr_accessor :address
+
+    # @return [string] the gene that is being annotated
     attr_accessor :Gene_ID
+
+    # @return [list] information obtained
     attr_accessor :information
 
     @@all_annotations_hash = Hash.new
@@ -19,13 +26,15 @@ class Annotator
 
     end
 
+
+    # This class method returns all instances of the class.
+    # @return [hash] all Annotator instances.
     def Annotator.all_instances
-=begin
-        This class method returns all instances of the class.
-        return @@all_annotations_hash: list that contains all the instances.
-=end
+
         return @@all_annotations_hash
+
     end
+
 end
 
 

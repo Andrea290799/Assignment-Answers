@@ -1,11 +1,14 @@
+# Class whose instances are genes. Attributes: Gene ID. 
 class Gene
 
+    # @return [string] gene ID
     attr_accessor :Gene_ID  
 
     @@record_list_gene = Hash.new
     @@direct_interactors_dictionary = Hash.new
     @@indirect_interactors_dictionary = Hash.new
-    
+
+
     def initialize (params = {})
 
         @Gene_ID = params.fetch(:Gene_ID, nil)
@@ -36,11 +39,11 @@ class Gene
 
     end
 
+
+
+    # This class method loads the information from a file.
+    # @param file [string] name of the file
     def Gene.load_from_file(file)
-=begin
-        This class method loads the information from a file.
-        param file: the file to read.
-=end
         
         # We read only the lines, not the header
         lines = File.readlines(file)
@@ -58,21 +61,21 @@ class Gene
 
     end
 
+    # This class method returns all instances of the class.
+    # @return [list] all Gene instances.
     def Gene.all_instances
-=begin
-        This class method returns all instances of the class.
-        return @@record_list_gene: list that contains all the instances.
-=end
+
         return @@record_list_gene
         
     end
 
+
+
+    #This class method gets the interactions information from IntAct 
+    #of the genes in the list and of their interactors. It saves the interactions
+    #in a file.
+
     def Gene.get_url_information
-=begin
-        This class method gets the interactions information from IntAct 
-        of the genes in the list and of their interactors. It saves the interactions
-        in a file.
-=end
 
         File.open('Interactions.tsv', 'w') do |f|
 
@@ -102,12 +105,10 @@ class Gene
     end
 
 
+    #This class method reads the created file and generates a dictionary
+    #whose keys are the genes in the list and the values their interactors genes
+    # @return [hash] direct interactions of genes in the list (keys) 
     def Gene.generate_direct_interactions_dictionary
-=begin
-        This class method reads the created file and generates a dictionary
-        whose keys are the genes in the list and the values their interactors genes
-        return: direct interactions dictionary
-=end
 
         lines_interactions = File.readlines('Interactions.tsv').drop(1)
         
@@ -145,7 +146,6 @@ class Gene
                 @@direct_interactors_dictionary[gene.Gene_ID] = interactions_list.compact
             end
 
-            
         end
 
         return @@direct_interactors_dictionary
@@ -153,14 +153,13 @@ class Gene
     end
 
 
-    def Gene.generate_indirect_interactions_dictionary
 
-=begin
-        This class method uses a interaction dictionary to create another dictionary, 
-        this time with indirect interactions (it gets all interactions like A->B->C, 
-        being A and C in the list)
-        return: indirect interactions dictionary
-=end
+
+    #This class method uses a interaction dictionary to create another dictionary, 
+    #this time with indirect interactions (it gets all interactions like A->B->C, 
+    #being A and C in the list).
+    # @return [hash] indirect interactions 
+    def Gene.generate_indirect_interactions_dictionary
 
         @@record_list_gene.values.each do |gene| 
 
@@ -171,7 +170,7 @@ class Gene
                 #We look at all the interactors of our target gene
                 @@direct_interactors_dictionary[gene.Gene_ID].each do |value|
 
-                    #If it's included in our initial list(initial file), we add it to the output list
+                    #If it's included in our initial list (initial file), we add it to the output list
                     if @@direct_interactors_dictionary.keys.include?(value)
 
                         final_list << value
@@ -228,18 +227,16 @@ class Gene
 
     end
 
-    def Gene.generate_networks
 
-=begin
-        This class method generates networks given an interaction dictionary.
-        return: a list of networks. 
-=end
+    # This class method generates networks given an interaction dictionary.
+    # @return [list] networks.
+    def Gene.generate_networks
 
         networks_list_values = @@indirect_interactors_dictionary.values
 
         while true
 
-            #big list
+            #big list (it will contain little lists)
             b_list = Array.new
 
             @@indirect_interactors_dictionary.keys.each do |key|
@@ -269,7 +266,7 @@ class Gene
 
             b_list.uniq!
 
-            #when all the little networks are all merged, we stop
+            #when all the little networks are merged, we stop
             if b_list == networks_list_values
 
                 break

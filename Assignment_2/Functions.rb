@@ -1,7 +1,6 @@
+# This function print a help message if needed.
 def help
-=begin
-        This function print a help message if needed.
-=end
+
         if ARGV[0] == "-h" || ARGV[0] == "-help"
             abort(
                 "\n\t\tThis script generates interaction networks between the genes in the given
@@ -14,49 +13,45 @@ def help
                     --------------------------------------------------------------------\n")
             end
         end
+
+
+# This function checks whether the given file has the correct format.
+# @param file [string] input file
+# @param identifier [string] regular expression to search in the file. It must be between '/'.
+def check_format(file, identifier)
     
-        def check_format(file, identifier)
-=begin
-            This function checks whether the given file has the correct format.
-            param file: input file
-            param identifier: regular expression to search in the file. It must be
-            between '/'.
-=end
+    if File.file?(file) == true
     
-            if File.file?(file) == true
-    
-                lines_gene = File.readlines(file)
+        lines_gene = File.readlines(file)
                 
-                match = Regexp.new(identifier) 
+        match = Regexp.new(identifier) 
                 
-                if not match.match(lines_gene[0])
+        if not match.match(lines_gene[0])
 
-                    abort("\e[1;31mSorry, the #{file} file has not the correct format.\e[m")
-                end
-
-           
-            else 
-
-                abort("\e[1;31mSorry, the #{file} file does not exist.\e[m")
-
-            end
+            abort("\e[1;31mSorry, the #{file} file has not the correct format.\e[m")
         end
+           
+    else 
+
+        abort("\e[1;31mSorry, the #{file} file does not exist.\e[m")
+
+    end
+end
 
 
+#This function gets the raw information from a given url. If the format
+#is json, it doesn't process the data, unlike if it is another format (tab25 this case). 
+#If 3rd argument given and format is not json, it returns a interactors list. 
+# @param url [string] url to search
+# @param file_format [string] output file format
+# @param gene_name [string] gene to seach information about. Optative.
+# @return [list] information in url
+# @return [list] interactors search reuslts. When 3rd argument given.
 def get_info_url(url, file_format, *gene_name)
-
-=begin
-
-This function gets the raw information from a given url. If the format
-is json, it doesn't process the data, unlike if it is another format (tab25 this case). 
-If 3rd argument given and format is not json, it returns a interactors list. 
-
-=end
 
     interacts_with = Array.new #this array will contain the interactors search reuslts
 
-    response = RestClient::Request.execute(  
-                                            method: :get,
+    response = RestClient::Request.execute(method: :get,
                                             url: url)  
 
     if file_format == "json" #for togows results
@@ -137,13 +132,9 @@ If 3rd argument given and format is not json, it returns a interactors list.
 end
 
 
+# This function process the raw GO information from the genes of a given list. 
+# @return [hash] return: lists of the GO terms of each of the genes present in the given list, being the keys genes from the gene list file. 
 def select_GO_information(gene_list)
-    
-=begin
-    This function process the raw GO information from the genes of a given list. 
-    return: a hash of lists of the GO terms of each of the genes present in the given list, 
-    being the keys genes from the gene list file. 
-=end
 
     go_annotations_hash = Hash.new
 
@@ -179,16 +170,9 @@ def select_GO_information(gene_list)
 
 end
 
-
+# This function process the raw KEGG information from the genes of a given list. 
+# @return [hash] return: lists of the KEGG terms of each of the genes present in the given list, being the keys genes from the gene list file. 
 def select_KEGG_information(gene_list)
-
-=begin
-
-    This function process the raw KEGG information from the genes of a given list. 
-    return: a hash of lists of the KEGG terms of each of the genes present in the given list, 
-    being the keys genes from the gene list file. 
-
-=end
 
     kegg_annotations_hash = Hash.new
 
