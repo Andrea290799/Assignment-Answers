@@ -4,7 +4,7 @@ class Gene
     # @return [string] gene ID
     attr_accessor :Gene_ID  
 
-    @@record_list_gene = Hash.new
+    @@record_hash_gene = Hash.new
     @@direct_interactors_dictionary = Hash.new
     @@indirect_interactors_dictionary = Hash.new
 
@@ -35,7 +35,7 @@ class Gene
 
         end
 
-        @@record_list_gene[@Gene_ID] = self
+        @@record_hash_gene[@Gene_ID] = self
 
     end
 
@@ -62,10 +62,10 @@ class Gene
     end
 
     # This class method returns all instances of the class.
-    # @return [list] all Gene instances.
+    # @return [hash] all Gene instances.
     def Gene.all_instances
 
-        return @@record_list_gene
+        return @@record_hash_gene
         
     end
 
@@ -83,7 +83,7 @@ class Gene
 
         end
 
-        @@record_list_gene.values.each do |gene|
+        @@record_hash_gene.values.each do |gene|
 
             interaction_address = "http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{gene.Gene_ID}?format=tab25"
 
@@ -112,7 +112,7 @@ class Gene
 
         lines_interactions = File.readlines('Interactions.tsv').drop(1)
         
-        @@record_list_gene.values.each do |gene| 
+        @@record_hash_gene.values.each do |gene| 
 
             interactions_list = []
 
@@ -161,7 +161,7 @@ class Gene
     # @return [hash] indirect interactions 
     def Gene.generate_indirect_interactions_dictionary
 
-        @@record_list_gene.values.each do |gene| 
+        @@record_hash_gene.values.each do |gene| 
 
             final_list = Array.new
 

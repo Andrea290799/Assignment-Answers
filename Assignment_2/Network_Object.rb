@@ -41,7 +41,7 @@ class Network
     end
 
     # This class method returns all instances of the class.
-    # @return [hash] all Network instances.
+    # @return [list] all Network instances.
     def Network.all_instances
 
         return @@record_list_network
