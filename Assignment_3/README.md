@@ -1,4 +1,4 @@
-This script gets the .embl file from all the genes present in the given list
+This program gets the .embl file from all the genes present in the given list
 and searches from CTTCTT motif in their exons sequence, both the strands + and -. 
 It generates 3 files, gene_coordinates.gff3, chr_coordinates.gff3 and No_CTTCTT_report.txt.
 The first one contains the coordinates of CTTCTT motif using as reference the gene
