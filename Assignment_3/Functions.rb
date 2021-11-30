@@ -1,4 +1,4 @@
-# This function print a help message if needed.
+# This function prints a help message if needed.
 def help
 
     if ARGV[0] == "-h" || ARGV[0] == "-help"
@@ -108,6 +108,7 @@ def get_positions_motifs(entry, gene_id)
             unless match_pos_exon.nil? 
 
                 # in the + strand...
+                # ?=(motif) is used to find overlapping motifs
                 re_motif_forward = Regexp.new(/(?=(cttctt))/) 
                 sequence = entry.seq.subseq[match_pos_exon[1].to_i-1..match_pos_exon[2].to_i-1]
                 sites = sequence.enum_for(:scan, re_motif_forward).map { Regexp.last_match.begin(0) }

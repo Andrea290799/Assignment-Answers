@@ -217,7 +217,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>This function print a help message if needed.</p>
+<p>This function prints a help message if needed.</p>
 </div></span>
   
 </li>
@@ -334,7 +334,6 @@
       <pre class="lines">
 
 
-143
 144
 145
 146
@@ -362,10 +361,11 @@
 168
 169
 170
-171</pre>
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '.\Functions.rb', line 143</span>
+      <pre class="code"><span class="info file"># File '.\Functions.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_features'>add_features</span><span class='lparen'>(</span><span class='id identifier rubyid_positions_list'>positions_list</span><span class='comma'>,</span> <span class='id identifier rubyid_strand'>strand</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span>
 
@@ -781,7 +781,8 @@
 134
 135
 136
-137</pre>
+137
+138</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File '.\Functions.rb', line 81</span>
@@ -816,6 +817,7 @@
             <span class='kw'>unless</span> <span class='id identifier rubyid_match_pos_exon'>match_pos_exon</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> 
 
                 <span class='comment'># in the + strand...
+</span>                <span class='comment'># ?=(motif) is used to find overlapping motifs
 </span>                <span class='id identifier rubyid_re_motif_forward'>re_motif_forward</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?=(cttctt))</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> 
                 <span class='id identifier rubyid_sequence'>sequence</span> <span class='op'>=</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_seq'>seq</span><span class='period'>.</span><span class='id identifier rubyid_subseq'>subseq</span><span class='lbracket'>[</span><span class='id identifier rubyid_match_pos_exon'>match_pos_exon</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='op'>-</span><span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_match_pos_exon'>match_pos_exon</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
                 <span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:scan</span><span class='comma'>,</span> <span class='id identifier rubyid_re_motif_forward'>re_motif_forward</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -860,7 +862,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>This function print a help message if needed.</p>
+<p>This function prints a help message if needed.</p>
 
 
   </div>
@@ -993,7 +995,6 @@
       <pre class="lines">
 
 
-178
 179
 180
 181
@@ -1041,10 +1042,11 @@
 223
 224
 225
-226</pre>
+226
+227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '.\Functions.rb', line 178</span>
+      <pre class="code"><span class="info file"># File '.\Functions.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write_to_GFF3'>write_to_GFF3</span><span class='lparen'>(</span><span class='id identifier rubyid_first_entry'>first_entry</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='comma'>,</span> <span class='id identifier rubyid_gene_name'>gene_name</span><span class='rparen'>)</span>
 
@@ -1105,7 +1107,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov 29 20:32:57 2021 by
+  Generated on Tue Nov 30 10:23:21 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>
