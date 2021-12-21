@@ -3,14 +3,17 @@ a reciprocal blast search between them, taking into account the evalue
 and coverage indicated. 
 
 --------------------------------------------------------------------
+
 USAGE
 ruby ./main file1 file2 coverage evalue
+
 --------------------------------------------------------------------
 
 *Evalue and coverage* default values were chosen because of the information
 found in this article: https://doi.org/10.1093/bioinformatics/btm585
 
 NEXT STEPS:
+
 Orthologs are defined as genes in different species that have evolved
 through speciation events only. 
 
@@ -26,3 +29,4 @@ tree with the different genes, being able to estimate when a function has
 diverged and can identify a branch that could be regarded as a functionally
 consistent ortholog group.
 
+https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000703
