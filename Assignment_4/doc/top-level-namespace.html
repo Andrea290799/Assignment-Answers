@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Top Level Namespace
+  
+    &mdash; Documentation by YARD 0.9.25
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo;
+    
+    
+    <span class="title">Top Level Namespace</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Top Level Namespace
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#create_blast_db-instance_method" title="#create_blast_db (instance method)">#<strong>create_blast_db</strong>(file, db_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This function creates a Blast database given a file and the database name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#get_ev_cov_cutoffs-instance_method" title="#get_ev_cov_cutoffs (instance method)">#<strong>get_ev_cov_cutoffs</strong>  &#x21d2; list </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This function gets coverage and evalue cutoffs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#get_file_type-instance_method" title="#get_file_type (instance method)">#<strong>get_file_type</strong>(file)  &#x21d2; string </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This function gets the file type (prot or nucl) and checks if the file
+exists.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#help-instance_method" title="#help (instance method)">#<strong>help</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This function prints a help message if needed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#prepare_blast-instance_method" title="#prepare_blast (instance method)">#<strong>prepare_blast</strong>(file_1_type, file_2_type)  &#x21d2; list </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This function define the kind of blast to do depending on the type of the
+database files.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#reciprocal_blast-instance_method" title="#reciprocal_blast (instance method)">#<strong>reciprocal_blast</strong>(file1, file2, db1, db2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Function that do a reciprocal blast search.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_blast_db-instance_method">
+  
+    #<strong>create_blast_db</strong>(file, db_name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This function creates a Blast database given a file and the database name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the file you want to create de database of</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>db_name</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the created database</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_blast_db'>create_blast_db</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_db_name'>db_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_file_type'>file_type</span> <span class='op'>=</span> <span class='id identifier rubyid_get_file_type'><span class='object_link'><a href="#get_file_type-instance_method" title="#get_file_type (method)">get_file_type</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_to_system'>to_system</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>makeblastdb -in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'> -dbtype </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file_type'>file_type</span><span class='embexpr_end'>}</span><span class='tstring_content'> -out </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_db_name'>db_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_to_system'>to_system</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_ev_cov_cutoffs-instance_method">
+  
+    #<strong>get_ev_cov_cutoffs</strong>  &#x21d2; <tt>list</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This function gets coverage and evalue cutoffs. If they are not given in
+the arguments,  it gets a default value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>list</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list containing coverage and evalue values</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_ev_cov_cutoffs'>get_ev_cov_cutoffs</span>
+    
+    <span class='kw'>if</span> <span class='kw'>not</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+        <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+\.{0,1}\d*$</span><span class='regexp_end'>/</span></span>
+            <span class='id identifier rubyid_cov'>cov</span> <span class='op'>=</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_cov'>cov</span> <span class='op'>=</span> <span class='float'>0.5</span>
+        <span class='kw'>end</span>
+
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_cov'>cov</span> <span class='op'>=</span> <span class='float'>0.5</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='kw'>not</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> 
+
+        <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+\.{0,1}\d*$</span><span class='regexp_end'>/</span></span>
+            <span class='id identifier rubyid_evalue'>evalue</span> <span class='op'>=</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+        <span class='kw'>else</span> 
+            <span class='id identifier rubyid_evalue'>evalue</span> <span class='op'>=</span> <span class='int'>10</span><span class='op'>**</span><span class='op'>-</span><span class='int'>6</span>
+        <span class='kw'>end</span>
+
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_evalue'>evalue</span> <span class='op'>=</span> <span class='int'>10</span><span class='op'>**</span><span class='op'>-</span><span class='int'>6</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_cov'>cov</span><span class='comma'>,</span> <span class='id identifier rubyid_evalue'>evalue</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_file_type-instance_method">
+  
+    #<strong>get_file_type</strong>(file)  &#x21d2; <tt>string</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This function gets the file type (prot or nucl) and checks if the file
+exists</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the file you want to know the type of</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the file type: nucl or prot</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_file_type'>get_file_type</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='kw'>true</span>
+    
+        <span class='id identifier rubyid_lines_gene'>lines_gene</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+                
+        <span class='kw'>if</span> <span class='id identifier rubyid_lines_gene'>lines_gene</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>M</span><span class='regexp_end'>/</span></span>
+
+            <span class='id identifier rubyid_file_type'>file_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prot</span><span class='tstring_end'>&quot;</span></span> <span class='comment'>#all proteins starts with M
+</span>
+        <span class='kw'>else</span> 
+            <span class='id identifier rubyid_file_type'>file_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nucl</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+           
+    <span class='kw'>else</span> 
+
+        <span class='id identifier rubyid_abort'>abort</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\e[1;31mSorry, the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'> file does not exist.\e[m</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span><span class='lparen'>(</span><span class='id identifier rubyid_file_type'>file_type</span><span class='rparen'>)</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="help-instance_method">
+  
+    #<strong>help</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This function prints a help message if needed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 2</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_help'>help</span>
+
+    <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-h</span><span class='tstring_end'>&quot;</span></span> <span class='op'>||</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-help</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_abort'>abort</span><span class='lparen'>(</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\t\tThis script gets the two files given by arguments and makes
+            a reciprocal blast search between them, taking into account the evalue
+            and coverage indicated.  
+            --------------------------------------------------------------------
+                USAGE
+                ruby ./main file1 file2 coverage evalue
+            --------------------------------------------------------------------\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prepare_blast-instance_method">
+  
+    #<strong>prepare_blast</strong>(file_1_type, file_2_type)  &#x21d2; <tt>list</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This function define the kind of blast to do depending on the type of the
+database files</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file_1_type</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>file type of one of the files</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file_2_type</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>file type of one of the files</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>list</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list with the prepared blast databases</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare_blast'>prepare_blast</span><span class='lparen'>(</span><span class='id identifier rubyid_file_1_type'>file_1_type</span><span class='comma'>,</span> <span class='id identifier rubyid_file_2_type'>file_2_type</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_file_1_type'>file_1_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prot</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>and</span> <span class='id identifier rubyid_file_2_type'>file_2_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prot</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_db1'>db1</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> 
+        <span class='id identifier rubyid_db2'>db2</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> 
+
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_file_1_type'>file_1_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nucl</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>and</span> <span class='id identifier rubyid_file_2_type'>file_2_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nucl</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_db1'>db1</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastn</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> 
+        <span class='id identifier rubyid_db2'>db2</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastn</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_file_1_type'>file_1_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nucl</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>and</span> <span class='id identifier rubyid_file_2_type'>file_2_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prot</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_db1'>db1</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tblastn</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> 
+        <span class='id identifier rubyid_db2'>db2</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastx</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_file_1_type'>file_1_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prot</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>and</span> <span class='id identifier rubyid_file_2_type'>file_2_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nucl</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_db1'>db1</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blastx</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> 
+        <span class='id identifier rubyid_db2'>db2</span> <span class='op'>=</span> <span class='const'>Bio</span><span class='op'>::</span><span class='const'>Blast</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tblastn</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_db1'>db1</span><span class='comma'>,</span> <span class='id identifier rubyid_db2'>db2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reciprocal_blast-instance_method">
+  
+    #<strong>reciprocal_blast</strong>(file1, file2, db1, db2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Function that do a reciprocal blast search.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file1</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a file to get the sequences.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file2</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a file to get the sequences.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>db1</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a database to do the blast search. Contains the sequences in file1</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>db2</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a database to do the blast search. Contains the sequences in file2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Functions.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reciprocal_blast'>reciprocal_blast</span><span class='lparen'>(</span><span class='id identifier rubyid_file1'>file1</span><span class='comma'>,</span> <span class='id identifier rubyid_file2'>file2</span><span class='comma'>,</span> <span class='id identifier rubyid_db1'>db1</span><span class='comma'>,</span> <span class='id identifier rubyid_db2'>db2</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_orthologs'>orthologs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_cov_cutoff'>cov_cutoff</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ev_cov_cutoffs'><span class='object_link'><a href="#get_ev_cov_cutoffs-instance_method" title="#get_ev_cov_cutoffs (method)">get_ev_cov_cutoffs</a></span></span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_evalue_cutoff'>evalue_cutoff</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ev_cov_cutoffs'><span class='object_link'><a href="#get_ev_cov_cutoffs-instance_method" title="#get_ev_cov_cutoffs (method)">get_ev_cov_cutoffs</a></span></span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+
+    <span class='const'>Bio</span><span class='op'>::</span><span class='const'>FlatFile</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='const'>Bio</span><span class='op'>::</span><span class='const'>FastaFormat</span><span class='comma'>,</span> <span class='id identifier rubyid_file1'>file1</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_fasta'>fasta</span><span class='op'>|</span>
+
+        <span class='id identifier rubyid_fasta'>fasta</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
+    
+            <span class='id identifier rubyid_report'>report</span> <span class='op'>=</span> <span class='id identifier rubyid_db2'>db2</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span>
+    
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    
+            <span class='comment'># we get the gene IDs of the query and the first hit
+</span>            <span class='id identifier rubyid_candidate_def'>candidate_def</span> <span class='op'>=</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_target_def'>target_def</span> 
+            <span class='id identifier rubyid_query_def'>query_def</span> <span class='op'>=</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_query_def'>query_def</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    
+            <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w+\.\w+)|</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> 
+    
+            <span class='id identifier rubyid_query_ID_1'>query_ID_1</span> <span class='op'>=</span> <span class='id identifier rubyid_query_def'>query_def</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_hit_ID_1'>hit_ID_1</span> <span class='op'>=</span> <span class='id identifier rubyid_candidate_def'>candidate_def</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> 
+    
+            <span class='kw'>if</span> <span class='id identifier rubyid_hit_ID_1'>hit_ID_1</span>
+    
+                <span class='id identifier rubyid_ev'>ev</span> <span class='op'>=</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_evalue'>evalue</span> 
+    
+                <span class='id identifier rubyid_cov'>cov</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query_end'>query_end</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>-</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query_start'>query_start</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_query_len'>query_len</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+                
+                <span class='comment'># we apply the filters
+</span>                <span class='kw'>if</span>  <span class='id identifier rubyid_ev'>ev</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_evalue_cutoff'>evalue_cutoff</span> <span class='kw'>and</span> <span class='id identifier rubyid_cov'>cov</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_cov_cutoff'>cov_cutoff</span>
+    
+                    <span class='const'>Bio</span><span class='op'>::</span><span class='const'>FlatFile</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='const'>Bio</span><span class='op'>::</span><span class='const'>FastaFormat</span><span class='comma'>,</span> <span class='id identifier rubyid_file2'>file2</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_fasta2'>fasta2</span><span class='op'>|</span>
+    
+                        <span class='id identifier rubyid_fasta2'>fasta2</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry2'>entry2</span><span class='op'>|</span>
+    
+                            <span class='id identifier rubyid_query_ID_2'>query_ID_2</span> <span class='op'>=</span> <span class='id identifier rubyid_entry2'>entry2</span><span class='period'>.</span><span class='id identifier rubyid_entry_id'>entry_id</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    
+                            <span class='kw'>if</span> <span class='id identifier rubyid_hit_ID_1'>hit_ID_1</span> <span class='op'>==</span> <span class='id identifier rubyid_query_ID_2'>query_ID_2</span>
+    
+                                <span class='id identifier rubyid_report2'>report2</span> <span class='op'>=</span> <span class='id identifier rubyid_db1'>db1</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_entry2'>entry2</span><span class='rparen'>)</span>
+    
+                                <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    
+                                <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_target_def'>target_def</span> 
+    
+                                <span class='id identifier rubyid_hit_ID_2'>hit_ID_2</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+
+                                <span class='id identifier rubyid_ev'>ev</span> <span class='op'>=</span> <span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_evalue'>evalue</span> 
+    
+                                <span class='id identifier rubyid_cov'>cov</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query_end'>query_end</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>-</span> <span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_hits'>hits</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query_start'>query_start</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='id identifier rubyid_report2'>report2</span><span class='period'>.</span><span class='id identifier rubyid_query_len'>query_len</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+
+                                <span class='kw'>if</span> <span class='id identifier rubyid_hit_ID_2'>hit_ID_2</span> <span class='op'>==</span> <span class='id identifier rubyid_query_ID_1'>query_ID_1</span> <span class='kw'>and</span> <span class='id identifier rubyid_ev'>ev</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_evalue_cutoff'>evalue_cutoff</span> <span class='kw'>and</span> <span class='id identifier rubyid_cov'>cov</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_cov_cutoff'>cov_cutoff</span>
+
+                                    <span class='id identifier rubyid_match'>match</span> <span class='op'>=</span> <span class='id identifier rubyid_regexp'>regexp</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+    
+                                    <span class='id identifier rubyid_orthologs'>orthologs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_entry2'>entry2</span><span class='period'>.</span><span class='id identifier rubyid_entry_id'>entry_id</span><span class='comma'>,</span> <span class='id identifier rubyid_match'>match</span><span class='rbracket'>]</span>
+    
+                                    <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Report.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
+                                        <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_orthologs'>orthologs</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>\t</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_orthologs'>orthologs</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                                    <span class='kw'>end</span>
+                                <span class='kw'>end</span>    
+                            <span class='kw'>end</span>
+                        <span class='kw'>end</span>
+                    <span class='kw'>end</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Dec 20 06:00:39 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.25 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
