@@ -11,7 +11,7 @@ ruby ./main file1 file2 [coverage evalue]
 
 **Evalue and coverage** default values were chosen because of the information
 found in this article: https://doi.org/10.1093/bioinformatics/btm585. They
-recommend to use a coverage of 50% and a evalue of 10^⁻6. 
+recommend to use a coverage of 50% and a evalue of 1/10^6. 
 
 **NEXT STEPS**:
 
