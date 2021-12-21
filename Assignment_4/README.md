@@ -4,15 +4,15 @@ and coverage indicated.
 
 --------------------------------------------------------------------
 
-USAGE
+**USAGE**
 ruby ./main file1 file2 coverage evalue
 
 --------------------------------------------------------------------
 
-*Evalue and coverage* default values were chosen because of the information
+**Evalue and coverage** default values were chosen because of the information
 found in this article: https://doi.org/10.1093/bioinformatics/btm585
 
-NEXT STEPS:
+**NEXT STEPS**:
 
 Orthologs are defined as genes in different species that have evolved
 through speciation events only. 
