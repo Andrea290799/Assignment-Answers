@@ -1,11 +1,11 @@
 This script gets the two files given by arguments and makes
 a reciprocal blast search between them, taking into account the evalue
-and coverage indicated. 
+and coverage indicated (optional arguments). 
 
 --------------------------------------------------------------------
 
 **USAGE**
-ruby ./main file1 file2 coverage evalue
+ruby ./main file1 file2 [coverage evalue]
 
 --------------------------------------------------------------------
 
@@ -18,9 +18,10 @@ recommend to use a coverage of 50% and a evalue of 10^⁻6.
 Orthologs are defined as genes in different species that have evolved
 through speciation events only. 
 
-After finding the BRHs, a third species should be included in the analysis
-in order to perform COG (Clusters of Orthologs Groups) analysis, where a set
-of 3 genes can form a single COG and 2 COGs join together if they share any BRHs. 
+After finding the BRHs (Best Reciprocal Hits), a third species should be
+included in the analysis in order to perform COG (Clusters of Orthologs Groups)
+analysis, where a set of 3 genes can form a single COG and 2 COGs join together
+if they share any BRH. 
 
 Other way in order to confirm the existence of possible orthologous genes
 could be to perform a multiple sequence alignment (MSA) and generate 
